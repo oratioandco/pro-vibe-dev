@@ -19,6 +19,10 @@
     {
       "command": ["add new feature", "develop new feature", "implement new functionality"],
       "workflow": "pro-vibe-dev/workflows/new-feature.md"
+    },
+    {
+      "command": ["create component", "review component", "design component"],
+      "agent": "pro-vibe-dev/agents/ui-agents/design-system-manager.md"
     }
   ]
 }

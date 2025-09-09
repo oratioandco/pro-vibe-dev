@@ -53,10 +53,11 @@ Do you approve the refined scope and core value, or would you like to explore al
 
 ```markdown
 ## 3.1 Technical Feasibility & Architecture
-**Activated Agents**: Relevant Tech Agents (e.g., Backend Agent, UI Frontend Agent)
+**Activated Agents**: Relevant Tech Agents (e.g., Backend Agent, UI Frontend Agent) + Design System Manager
 
 **Automatic Action**:
 - Tech Agents will assess the technical feasibility of the feature, identify potential architectural impacts, and suggest efficient implementation paths.
+- The Design System Manager will review component needs and suggest existing components for reuse or extension.
 
 **User Checkpoint**:
 "From a Technical perspective, here are the considerations:
@@ -71,10 +72,11 @@ Do you approve the technical approach? (approve/revise)"
 
 ```markdown
 ## 4.1 UX Guidelines & Review
-**Activated Agent**: UX Designer (new agent) + Accessibility Expert
+**Activated Agent**: UX Designer (new agent) + Accessibility Expert + Design System Manager
 
 **Automatic Action**:
 - The UX Designer and Accessibility Expert will review the feature from a user perspective, provide crucial UX guidelines, and identify potential usability or accessibility issues.
+- The Design System Manager will ensure that any new UI elements align with the project's design system and component library.
 
 **User Checkpoint**:
 "From a User Experience perspective, here are the guidelines and considerations:

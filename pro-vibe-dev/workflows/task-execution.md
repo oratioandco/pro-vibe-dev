@@ -55,6 +55,7 @@ Ready to proceed? (y/n)"
 ## 1.2 Component Reuse Analysis
 **Automatic Agent Activation**: 
 - UI Frontend Agent scans for existing components
+- Design System Manager analyzes component needs against existing registry
 - Knowledge base checks component registry
 - Architecture analyzer identifies patterns
 
@@ -133,6 +134,7 @@ swift test
 
 # 3. Check accessibility compliance
 # Automated accessibility audit
+# [ACCESSIBILITY_AUDIT_COMMAND] (command will be configured by best-practice-analyzer agent)
 
 # 4. Verify code coverage
 # Must meet 95% for business logic
@@ -193,7 +195,7 @@ Review documentation? (y/n/skip)"
 **Automatic Pre-Commit Checks**:
 - All tests passing
 - Code coverage meets standards
-- No accessibility violations
+- No accessibility violations (automated audit passed)
 - No security issues
 - Documentation current
 
