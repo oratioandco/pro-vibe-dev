@@ -12,7 +12,7 @@ To create a new, well-structured project based on user-defined technology choice
 
 ## Step-by-Step Setup Process
 
-### Phase 1: Technology Stack and Project Definition
+### Phase 1: Project Definition and Technology Stack Consultation
 
 ```markdown
 ## 1.1 Define Project Core Details
@@ -22,9 +22,30 @@ To create a new, well-structured project based on user-defined technology choice
 - **Project Type**: [e.g., "iOS App", "macOS App", "Universal App", "Web App", "Backend Service"]
 - **Brief Description**: [A one-sentence summary of the app's purpose]
 
-## 1.2 Select Technology Stack
-**User Input Required**:
-"Now, let's choose the technology stack. Please specify your preferences. If you're unsure, I can suggest best practices."
+## 1.2 Technology Stack Consultation
+**Automatic Action**:
+- Based on your project description, I will research and recommend a few technology stacks that are stable, future-proof, cost-efficient, and GDPR-compliant.
+
+**Example Research Queries**:
+- "best open source stack for [Project Type] 2025"
+- "GDPR compliant hosting solutions in Germany"
+- "stable and future-proof database for [Project Type]"
+
+**User Checkpoint**:
+"Based on my research, here are a few recommended technology stacks for your project:
+
+**Option 1: [Stack Name]**
+- **Pros**: [e.g., "Excellent performance", "Large community", "Free and open source"]
+- **Cons**: [e.g., "Steeper learning curve"]
+
+**Option 2: [Stack Name]**
+- **Pros**: [e.g., "Easy to learn", "Rapid development"]
+- **Cons**: [e.g., "Potential for vendor lock-in"]
+
+**Option 3: Other**
+- You can also specify your own technology stack.
+
+Please choose an option or specify your own stack:
 - **Primary Language/Framework**: [e.g., "SwiftUI", "React", "Node.js", "Python"]
 - **UI Framework/Library (if applicable)**: [e.g., "Shadcn", "Tailwind CSS", "Material-UI"]
 - **Database (if applicable)**: [e.g., "Core Data", "SwiftData", "Firebase", "PostgreSQL"]
