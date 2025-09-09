@@ -31,7 +31,7 @@ Pro-Vibe-Dev is an intelligent development system that transforms AI-assisted co
 - ✅ **Component Reuse**: Automatic discovery of existing components to prevent duplication.
 - ✅ **Build Validation**: Tests and builds code before any commit, ensuring working software.
 - ✅ **Junior-Dev Ready**: Every task broken into 1-4 hour chunks with crystal-clear guidance.
-- ✅ **Quality Built-In**: Automatic accessibility compliance, TDD methodology, security best practices.
+- ✅ **Quality Built-In**: Automatic accessibility compliance, TDD methodology, security best practices, and design system adherence.
 - ✅ **Automated Documentation**: Always up-to-date feature and system overview.
 - ✅ **Anti-Overengineering**: Lean PRDs and focused development prevent feature creep.
 
@@ -137,7 +137,8 @@ pro-vibe-dev/
 │   └── quality-gates.md         # Automatic quality validation
 ├── agents/                      # Specialized AI agents
 │   ├── ui-agents/              # SwiftUI & accessibility specialists
-│   │   └── ux-designer.md      # User experience design specialist
+│   │   ├── ux-designer.md      # User experience design specialist
+│   │   └── design-system-manager.md # Component system and design system manager
 │   ├── backend-agents/         # Service & security specialists  
 │   ├── quality-agents/         # Testing & compliance specialists
 │   └── coordination-agents/    # Multi-agent orchestration
@@ -223,8 +224,8 @@ claude-code --task="implement real-time messaging with accessibility and compreh
 - **Automated Feature Overview**: `feature-overview.md` is automatically updated with new feature details.
 
 ### During Task Execution
-- **Component Discovery**: Automatically finds existing components to prevent duplication.
-- **Agent Activation**: Right specialists activate based on task type (UI → Accessibility, Backend → Security).
+- **Component Discovery**: Automatically finds existing components to prevent duplication, guided by the Design System Manager..
+- **Agent Activation**: Right specialists activate based on task type (UI → Accessibility, Backend → Security, Component → Design System Manager)..
 - **Test Generation**: TDD templates created based on acceptance criteria.
 - **Build Validation**: Code tested and built before any commits.
 - **Quality Gates**: Accessibility, security, and performance validated automatically.
