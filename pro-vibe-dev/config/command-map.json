@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "command": ["start a new project", "new project", "setup project"],
+      "workflow": "pro-vibe-dev/workflows/project-setup.md"
+    },
+    {
+      "command": ["show me the task list", "show tasks", "list tasks"],
+      "action": "cat pro-vibe-dev/tasks/current-sprint.md"
+    },
+    {
+      "command": ["give me a project update", "project status", "update"],
+      "action": "git status"
+    },
+    {
+      "command": ["execute task", "implement feature", "start development", "build feature"],
+      "workflow": "pro-vibe-dev/workflows/task-execution.md"
+    }
+  ]
+}
