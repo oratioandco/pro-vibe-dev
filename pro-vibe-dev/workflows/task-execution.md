@@ -167,46 +167,29 @@ IF user_reports_issues:
     RETURN: To build validation
 ```
 
-### Phase 4: Documentation and Knowledge Updates
+### Phase 4: Documentation and Git Workflow
 ```markdown
-## 4.1 Automatic Documentation Updates (Pre-Commit)
+## 4.1 Automatic Documentation and Task Completion
 **Activated Agents**: Documentation Agent + Knowledge Updater
 
 **Automatic Updates**:
 1. **Component Registry**: 
-   - Add new reusable components with usage examples
-   - Update component relationships and dependencies
-
+   - Add new reusable components with usage examples.
 2. **Architecture Documentation**:
-   - Update system architecture if new patterns introduced
-   - Document integration points
-
+   - Update system architecture if new patterns introduced.
 3. **API Documentation**:
-   - Generate/update API docs for new services
-   - Include usage examples
-
+   - Generate/update API docs for new services.
 4. **Feature Documentation**:
-   - Create/update feature documentation
-   - Include screenshots if UI changes
-
+   - Create/update feature documentation.
 5. **Task Completion**:
-   - Mark task as complete in current-sprint.md
-   - Move to completed with learnings
-   - Update velocity metrics
+   - **Action**: Find the task "[Task Title]" in `pro-vibe-dev/tasks/current-sprint.md` and mark it as complete by adding "✅" before the task title.
 
 **User Review**:
-"Documentation has been updated:
-- ✅ Component registry: [new components]
-- ✅ Architecture docs: [changes]
-- ✅ Feature docs: [updates]
-- ✅ Task status: Marked complete
+"Documentation has been updated and the task has been marked as complete.
 
 Review documentation? (y/n/skip)"
-```
 
-### Phase 5: Git Commit Preparation
-```markdown
-## 5.1 Commit Validation and Preparation
+## 4.2 Git Commit and Push
 **Automatic Pre-Commit Checks**:
 - All tests passing
 - Code coverage meets standards
@@ -228,29 +211,20 @@ Closes: [task ID]
 
 Approve this commit message? (y/edit/cancel)"
 
-## 5.2 Final Commit Execution
-**Only After User Approval**:
-```bash
-# Stage all changes
-git add .
+**User Checkpoint**:
+"Would you like to commit and push the changes? (y/n)"
 
-# Create commit with approved message
-git commit -m "[approved message]"
+**On User Approval**:
+- **Action**: `git add .`
+- **Action**: `git commit -m "[approved message]"`
+- **Action**: `git push`
 
-# Do NOT push automatically - user controls when to push
-```
-
-**Post-Commit Confirmation**:
-"✅ Commit created successfully!
-- All code changes committed
-- Documentation updated
-- Task marked complete
-- Knowledge base updated
+**Post-Push Confirmation**:
+"✅ Changes have been committed and pushed successfully!
 
 Next steps:
-1. Push when ready: git push
-2. Create PR if needed
-3. Start next task: [show next priority]"
+1. Create PR if needed
+2. Start next task: [show next priority]"
 ```
 
 ## Automatic Agent Activation Rules
