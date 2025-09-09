@@ -14,21 +14,26 @@ Pro-Vibe-Dev is an intelligent development system that transforms AI-assisted co
 
 ### How It Works
 
-1. **Vision & Planning**: Guided PRD creation prevents overengineering
-2. **Task Breakdown**: Automatic conversion to 1-4 hour junior-dev tasks  
-3. **Smart Execution**: Step-by-step implementation with automatic agent activation
-4. **Component Reuse**: Discovers existing components to prevent duplication
-5. **Quality Gates**: Tests and builds before any code is committed
-6. **User Control**: You approve key decisions and validate results
+1. **Project Setup**: Guided setup with tech stack consultation and best practice application.
+2. **Vision & Planning**: Guided PRD creation prevents overengineering.
+3. **New Feature Development**: Structured workflow with PM, Tech, and UX consultations.
+4. **Task Breakdown**: Automatic conversion to 1-4 hour junior-dev tasks.
+5. **Smart Execution**: Step-by-step implementation with automatic agent activation.
+6. **Component Reuse**: Discovers existing components to prevent duplication.
+7. **Quality Gates**: Tests and builds before any code is committed.
+8. **User Control**: You approve key decisions and validate results.
+9. **Automated Documentation**: Always up-to-date feature and system overview.
 
 ### Key Benefits
 
-- ✅ **Step-by-Step Execution**: Guided development with user checkpoints and automatic agent activation
-- ✅ **Component Reuse**: Automatic discovery of existing components to prevent duplication
-- ✅ **Build Validation**: Tests and builds code before any commit, ensuring working software
-- ✅ **Junior-Dev Ready**: Every task broken into 1-4 hour chunks with crystal-clear guidance
-- ✅ **Quality Built-In**: Automatic accessibility compliance, TDD methodology, security best practices
-- ✅ **Anti-Overengineering**: Lean PRDs and focused development prevent feature creep
+- ✅ **Step-by-Step Execution**: Guided development with user checkpoints and automatic agent activation.
+- ✅ **New Feature Workflow**: Structured development with integrated PM, Tech, and UX consultations.
+- ✅ **Component Reuse**: Automatic discovery of existing components to prevent duplication.
+- ✅ **Build Validation**: Tests and builds code before any commit, ensuring working software.
+- ✅ **Junior-Dev Ready**: Every task broken into 1-4 hour chunks with crystal-clear guidance.
+- ✅ **Quality Built-In**: Automatic accessibility compliance, TDD methodology, security best practices.
+- ✅ **Automated Documentation**: Always up-to-date feature and system overview.
+- ✅ **Anti-Overengineering**: Lean PRDs and focused development prevent feature creep.
 
 ## 🚀 Quick Start (5 Minutes)
 
@@ -89,6 +94,7 @@ claude-code --task="Use pro-vibe-dev/workflows/task-execution.md to implement fi
 
 ### 2. Strategic Planning
 - **[create-vision-prd.md](pro-vibe-dev/workflows/create-vision-prd.md)**: Create focused product vision (8-12 minutes)
+- **[new-feature.md](pro-vibe-dev/workflows/new-feature.md)**: Structured workflow for new feature development.
 - **[create-tasks.md](pro-vibe-dev/workflows/create-tasks.md)**: Convert PRDs to junior-dev tasks (automatic)
 
 ### 3. Development Execution  
@@ -131,9 +137,11 @@ pro-vibe-dev/
 ├── workflows/                    # Core development processes
 │   ├── create-vision-prd.md     # Strategic product vision creation
 │   ├── create-tasks.md          # Junior-dev task generation
+│   ├── new-feature.md           # New feature development workflow
 │   └── quality-gates.md         # Automatic quality validation
 ├── agents/                      # Specialized AI agents
 │   ├── ui-agents/              # SwiftUI & accessibility specialists
+│   │   └── ux-designer.md      # User experience design specialist
 │   ├── backend-agents/         # Service & security specialists  
 │   ├── quality-agents/         # Testing & compliance specialists
 │   └── coordination-agents/    # Multi-agent orchestration
@@ -141,6 +149,8 @@ pro-vibe-dev/
 │   ├── claude-code.toml        # Claude Code integration
 │   ├── generic-config.json     # Universal AI CLI support
 │   └── gemini-cli.yaml         # Gemini CLI configuration
+├── docs/                       # Project documentation
+│   └── feature-overview.md     # Automatic feature and system overview
 └── templates/                  # Professional templates
     ├── task-template.md        # Standard task format
     └── prd-template.md         # Lean PRD structure
@@ -179,20 +189,17 @@ pro-vibe-dev/
 # 1. Start a new project (5 minutes)
 claude-code --task="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
 
-# 2. Vision PRD (8 minutes)
-claude-code --task="Use create-vision-prd.md to create vision for expense tracking feature"
+# 2. Add a new feature (10 minutes)
+claude-code --task="Use pro-vibe-dev/workflows/new-feature.md to add new feature: Expense Tracking"
 
-# 3. Task Generation (5 minutes)  
-claude-code --task="Use create-tasks.md to convert expense tracking PRD into junior-dev tasks"
-
-# 4. Smart Execution (15+ minutes with automatic guidance)
+# 3. Smart Execution (15+ minutes with automatic guidance)
 claude-code --task="Use task-execution.md to implement 'Create Expense Model' task"
 # → Automatic: TDD templates, build validation, documentation updates
 
 claude-code --task="Use task-execution.md to implement 'Create Expense List View' task"  
 # → Automatic: Component discovery, accessibility validation, reusability check
 
-# 5. Feature Complete
+# 4. Feature Complete
 # All tests pass, documentation updated, ready for production!
 ```
 
@@ -222,12 +229,18 @@ claude-code --task="Use task-coordinator.md to implement real-time messaging wit
 
 ## 🤖 Automatic Development Features
 
+### During New Feature Development
+- **PM Consultation**: Vision Strategist guides scope minimization and alternative suggestions.
+- **Tech Consultation**: Backend and UI Frontend agents assess feasibility and suggest implementation paths.
+- **UX Consultation**: UX Designer and Accessibility Expert provide guidelines and review usability.
+- **Automated Feature Overview**: `feature-overview.md` is automatically updated with new feature details.
+
 ### During Task Execution
-- **Component Discovery**: Automatically finds existing components to prevent duplication
-- **Agent Activation**: Right specialists activate based on task type (UI → Accessibility, Backend → Security)
-- **Test Generation**: TDD templates created based on acceptance criteria
-- **Build Validation**: Code tested and built before any commits
-- **Quality Gates**: Accessibility, security, and performance validated automatically
+- **Component Discovery**: Automatically finds existing components to prevent duplication.
+- **Agent Activation**: Right specialists activate based on task type (UI → Accessibility, Backend → Security).
+- **Test Generation**: TDD templates created based on acceptance criteria.
+- **Build Validation**: Code tested and built before any commits.
+- **Quality Gates**: Accessibility, security, and performance validated automatically.
 
 ### User Control Points
 - **Component Decisions**: "Found similar component. Reuse, extend, or create new?"
