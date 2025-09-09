@@ -13,9 +13,10 @@
 
 ## Testing & Defensive Programming
 - **Test-Driven Development (TDD)**: Always write tests before writing implementation code.
-- Use XCTest for unit and UI testing.
+- Use XCTest for unit, integration, and UI testing (XCUITest).
 - Aim for a high test coverage (90%+).
 - Write tests for all new features and bug fixes.
+- Integrate UI tests into CI/CD pipelines for automated regression testing.
 - **Defensive Programming**: Implement robust error handling and input validation.
 - Use `guard` statements for early exit conditions.
 - Handle optional values carefully to prevent crashes.

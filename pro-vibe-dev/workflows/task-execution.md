@@ -128,8 +128,8 @@ Look good? (y/n/modify)"
 # 1. Run unit tests
 swift test
 
-# 2. Run UI tests if applicable
-xcodebuild test -scheme YourApp -destination 'platform=iOS Simulator,name=iPhone 15'
+# 2. Run UI tests (command will be configured by best-practice-analyzer agent)
+# [UI_TEST_COMMAND]
 
 # 3. Check accessibility compliance
 # Automated accessibility audit

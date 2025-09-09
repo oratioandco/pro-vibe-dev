@@ -14,8 +14,10 @@
 ## Testing & Defensive Programming
 - **Test-Driven Development (TDD)**: Always write tests before writing implementation code.
 - Use Jest and React Testing Library for unit and integration testing.
+- Use Playwright or Cypress for end-to-end (UI) testing.
 - Aim for a high test coverage (90%+).
 - Write tests for all new features and bug fixes.
+- Integrate UI tests into CI/CD pipelines for automated regression testing.
 - **Defensive Programming**: Implement robust error handling and input validation.
 - Validate props and state to prevent unexpected behavior.
 - Use `try-catch` blocks for asynchronous operations.

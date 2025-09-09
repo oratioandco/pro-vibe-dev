@@ -17,6 +17,7 @@
 - Use Espresso for UI testing.
 - Aim for a high test coverage (90%+).
 - Write tests for all new features and bug fixes.
+- Integrate UI tests into CI/CD pipelines for automated regression testing.
 - **Defensive Programming**: Implement robust error handling and input validation.
 - Use `require` and `check` functions for preconditions.
 - Handle nullability explicitly using Kotlin's type system.

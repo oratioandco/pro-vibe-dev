@@ -23,6 +23,7 @@ To automatically analyze best-practice research and apply it to the project conf
     *   Agent personas (`*.md`)
     *   `.clauderc`
     *   `.cursor/settings.json`
+    *   **UI Test Command Injection**: Extracts the recommended UI test command from the research and injects it into the `task-execution.md` workflow.
 4.  **Apply Updates**: It automatically applies the updates to the configuration files.
 
 ## Usage Example

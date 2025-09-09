@@ -14,8 +14,10 @@
 ## Testing & Defensive Programming
 - **Test-Driven Development (TDD)**: Always write tests before writing implementation code.
 - Use the `flutter_test` package for unit, widget, and integration testing.
+- Use `integration_test` package for UI testing.
 - Aim for a high test coverage (90%+).
 - Write tests for all new features and bug fixes.
+- Integrate UI tests into CI/CD pipelines for automated regression testing.
 - **Defensive Programming**: Implement robust error handling and input validation.
 - Use `assert` statements for preconditions and postconditions.
 - Handle null values carefully to prevent crashes.
