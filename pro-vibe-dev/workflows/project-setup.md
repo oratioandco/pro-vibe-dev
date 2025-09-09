@@ -52,20 +52,25 @@ Please choose an option or specify your own stack:
 - **Key Libraries/Dependencies**: [e.g., "Alamofire", "Kingfisher", "Redux"]
 ```
 
-### Phase 2: Best-Practice Research and Configuration
+### Phase 2: Best-Practice Application and Configuration
 
 ```markdown
-## 2.1 Research Best Practices
+## 2.1 Apply Best Practices
 **Automatic Action**:
-- Based on the selected technology stack, I will perform a web search for current best practices.
-- **Example Search Query**: "best practices for SwiftUI iOS app with SwiftData and Alamofire 2025"
+- Check if a pre-configured best-practice file exists for the selected `Primary Language/Framework` in `pro-vibe-dev/knowledge-base/best-practices/`.
 
-**Output**:
-- A summary of the findings will be saved to `docs/research/tech-stack-best-practices.md`.
+IF pre-configured_file_exists:
+    - **Action**: Load best practices from `pro-vibe-dev/knowledge-base/best-practices/[Primary Language/Framework].md`.
+    - **Output**: "Using pre-configured best practices for [Primary Language/Framework]."
+ELSE:
+    - **Action**: Perform a web search for current best practices for the selected technology stack.
+    - **Example Search Query**: "best practices for [Primary Language/Framework] [Project Type] with [UI Framework/Library] and [Database] 2025"
+    - **Output**: A summary of the findings will be saved to `docs/research/tech-stack-best-practices.md`.
+    - **Action**: Invoke the `best-practice-analyzer.md` agent to analyze the research and apply the best practices to the project configuration.
 
 ## 2.2 Configure Project and Agents
 **Automatic Action**:
-- The system and agent configurations will be updated based on the research.
+- The system and agent configurations will be updated based on the applied best practices.
 - **`generic-config.json`**: Updated with project-specific settings.
 - **Agent Personas (`*.md`)**: Updated with relevant best practices and coding patterns.
 - **Example Update to `ui-frontend.md`**: "When building SwiftUI views, always use `@State` for transient UI state and `@StateObject` for view models. Ensure all views are embeddable in a `UIHostingController` for potential UIKit integration."
