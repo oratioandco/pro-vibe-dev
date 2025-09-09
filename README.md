@@ -41,7 +41,16 @@ cd pro-vibe-dev
 # The system is ready to use - no installation required!
 ```
 
-### 2. Create Your First Vision PRD (5 minutes)
+### 2. Start a New Project (5 minutes)
+```bash
+# With Claude Code
+claude-code --task="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
+
+# With any AI CLI
+[YOUR_CLI] --prompt="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
+```
+
+### 3. Create Your First Vision PRD (5 minutes)
 ```bash
 # With Claude Code
 claude-code --task="Use pro-vibe-dev/workflows/create-vision-prd.md to create vision for SwiftUI habit tracking app"
@@ -50,13 +59,13 @@ claude-code --task="Use pro-vibe-dev/workflows/create-vision-prd.md to create vi
 [YOUR_CLI] --prompt="Use pro-vibe-dev/workflows/create-vision-prd.md to create vision for SwiftUI habit tracking app"
 ```
 
-### 3. Generate Junior-Dev Tasks (3 minutes)
+### 4. Generate Junior-Dev Tasks (3 minutes)
 ```bash
 # Convert your vision PRD into actionable tasks
 claude-code --task="Use pro-vibe-dev/workflows/create-tasks.md to convert habit tracking vision PRD into junior-developer tasks"
 ```
 
-### 4. Execute with Automatic Guidance (Step-by-Step)
+### 5. Execute with Automatic Guidance (Step-by-Step)
 ```bash
 # Use the enhanced task execution workflow
 claude-code --task="Use pro-vibe-dev/workflows/task-execution.md to implement first task from current sprint"
@@ -75,17 +84,20 @@ claude-code --task="Use pro-vibe-dev/workflows/task-execution.md to implement fi
 
 ## 📚 Core Workflows
 
-### 1. Strategic Planning
+### 1. Project Setup
+- **[project-setup.md](pro-vibe-dev/workflows/project-setup.md)**: Initializes a new project with tech stack consultation.
+
+### 2. Strategic Planning
 - **[create-vision-prd.md](pro-vibe-dev/workflows/create-vision-prd.md)**: Create focused product vision (8-12 minutes)
 - **[create-tasks.md](pro-vibe-dev/workflows/create-tasks.md)**: Convert PRDs to junior-dev tasks (automatic)
 
-### 2. Development Execution  
+### 3. Development Execution  
 - **[task-execution.md](pro-vibe-dev/workflows/task-execution.md)**: Step-by-step execution with automatic agent activation
 - **[task-coordinator.md](pro-vibe-dev/agents/coordination-agents/task-coordinator.md)**: Coordinate complex multi-domain features
-- **[ui-frontend.md](pro-vibe-dev/agents/ui-agents/ui-frontend.md)**: Build accessible SwiftUI components
+- **[ui-frontend.md](pro-vbe-dev/agents/ui-agents/ui-frontend.md)**: Build accessible SwiftUI components
 - **[backend.md](pro-vibe-dev/agents/backend-agents/backend.md)**: Create secure, testable services
 
-### 3. Quality Assurance
+### 4. Quality Assurance
 - **[quality-gates.md](pro-vibe-dev/workflows/quality-gates.md)**: Automatic quality validation
 - **[tdd-enforcer.md](pro-vibe-dev/agents/quality-agents/tdd-enforcer.md)**: Test-driven development guidance
 
@@ -164,20 +176,23 @@ pro-vibe-dev/
 
 ### Create a Complete Feature (30 minutes with automatic workflow)
 ```bash
-# 1. Vision PRD (8 minutes)
+# 1. Start a new project (5 minutes)
+claude-code --task="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
+
+# 2. Vision PRD (8 minutes)
 claude-code --task="Use create-vision-prd.md to create vision for expense tracking feature"
 
-# 2. Task Generation (5 minutes)  
+# 3. Task Generation (5 minutes)  
 claude-code --task="Use create-tasks.md to convert expense tracking PRD into junior-dev tasks"
 
-# 3. Smart Execution (15+ minutes with automatic guidance)
+# 4. Smart Execution (15+ minutes with automatic guidance)
 claude-code --task="Use task-execution.md to implement 'Create Expense Model' task"
 # → Automatic: TDD templates, build validation, documentation updates
 
 claude-code --task="Use task-execution.md to implement 'Create Expense List View' task"  
 # → Automatic: Component discovery, accessibility validation, reusability check
 
-# 4. Feature Complete
+# 5. Feature Complete
 # All tests pass, documentation updated, ready for production!
 ```
 
