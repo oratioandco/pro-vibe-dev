@@ -1,4 +1,4 @@
-# Pro-Vibe-Dev: Professional AI-Powered SwiftUI Development System
+# Pro-Vibe-Dev: Professional AI-Powered Multi-Stack Development System
 
 > **Professional development velocity with vibe-coded simplicity**
 
@@ -48,33 +48,29 @@ cd pro-vibe-dev
 
 ### 2. Start a New Project (5 minutes)
 ```bash
-# With Claude Code
-claude-code --task="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
-
-# With any AI CLI
-[YOUR_CLI] --prompt="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
+# With Claude Code (or any AI CLI configured with command-dispatcher)
+claude-code --task="start a new project"
 ```
 
 ### 3. Create Your First Vision PRD (5 minutes)
 ```bash
-# With Claude Code
-claude-code --task="Use pro-vibe-dev/workflows/create-vision-prd.md to create vision for SwiftUI habit tracking app"
-
-# With any AI CLI
-[YOUR_CLI] --prompt="Use pro-vibe-dev/workflows/create-vision-prd.md to create vision for SwiftUI habit tracking app"
+# With Claude Code (or any AI CLI configured with command-dispatcher)
+claude-code --task="create vision for SwiftUI habit tracking app"
 ```
 
 ### 4. Generate Junior-Dev Tasks (3 minutes)
 ```bash
-# Convert your vision PRD into actionable tasks
-claude-code --task="Use pro-vibe-dev/workflows/create-tasks.md to convert habit tracking vision PRD into junior-developer tasks"
+# With Claude Code (or any AI CLI configured with command-dispatcher)
+claude-code --task="convert habit tracking vision PRD into junior-developer tasks"
 ```
 
 ### 5. Execute with Automatic Guidance (Step-by-Step)
 ```bash
-# Use the enhanced task execution workflow
-claude-code --task="Use pro-vibe-dev/workflows/task-execution.md to implement first task from current sprint"
+# With Claude Code (or any AI CLI configured with command-dispatcher)
+claude-code --task="execute first task from current sprint"
 ```
+
+**Note**: Thanks to the `command-dispatcher.md` agent, you no longer need to explicitly @-mention workflow files for common commands. The system will automatically understand your intent.
 
 **What Happens**:
 - 🔍 Automatic component discovery (reuse existing or create new)
@@ -187,35 +183,26 @@ pro-vibe-dev/
 ### Create a Complete Feature (30 minutes with automatic workflow)
 ```bash
 # 1. Start a new project (5 minutes)
-claude-code --task="Use pro-vibe-dev/workflows/project-setup.md to start a new project"
+claude-code --task="start a new project"
 
 # 2. Add a new feature (10 minutes)
-claude-code --task="Use pro-vibe-dev/workflows/new-feature.md to add new feature: Expense Tracking"
+claude-code --task="add new feature: Expense Tracking"
 
 # 3. Smart Execution (15+ minutes with automatic guidance)
-claude-code --task="Use task-execution.md to implement 'Create Expense Model' task"
+claude-code --task="execute task: Create Expense Model"
 # → Automatic: TDD templates, build validation, documentation updates
 
-claude-code --task="Use task-execution.md to implement 'Create Expense List View' task"  
+claude-code --task="execute task: Create Expense List View"  
 # → Automatic: Component discovery, accessibility validation, reusability check
 
 # 4. Feature Complete
 # All tests pass, documentation updated, ready for production!
 ```
 
-**What happens during execution**:
-- 🔍 Component Analyzer checks for reusable components
-- 🤖 Agents activate automatically (UI Frontend, Backend, TDD Enforcer, etc.)
-- 🧪 Tests written first with templates
-- 🏗️ Code built and validated before commits
-- 📱 User tests in Xcode before approval
-- 📚 Documentation updates automatically
-- ✅ Git commits only after everything passes
-
 ### Junior Developer Onboarding (Fully Guided)
 ```bash
 # New developer uses the execution workflow for complete guidance
-claude-code --task="Use task-execution.md to implement next task from current sprint"
+claude-code --task="execute next task from current sprint"
 # → Automatic: Agent selection, test templates, component discovery, quality validation
 # → User involved at: Component decisions, test approval, manual testing, commit approval
 ```
@@ -223,7 +210,7 @@ claude-code --task="Use task-execution.md to implement next task from current sp
 ### Complex Feature Coordination
 ```bash  
 # Multi-domain feature requiring coordination
-claude-code --task="Use task-coordinator.md to implement real-time messaging with accessibility and comprehensive testing"
+claude-code --task="implement real-time messaging with accessibility and comprehensive testing"
 # → Automatic agent orchestration with quality gate integration
 ```
 
@@ -359,13 +346,13 @@ pro-vibe-dev/workflows/your-workflow.md
 # Choose your approach:
 
 # 1. Strategic Product Development
-claude-code --task="Use pro-vibe-dev/workflows/create-vision-prd.md to create vision for [your app idea]"
+claude-code --task="create vision for [your app idea]"
 
 # 2. Immediate Feature Development  
-claude-code --task="Use pro-vibe-dev ui-frontend agent to create accessible [component name]"
+claude-code --task="create accessible [component name]"
 
 # 3. Complete System Setup
-claude-code --task="Use pro-vibe-dev task-coordinator to set up comprehensive development workflow for [project name]"
+claude-code --task="set up comprehensive development workflow for [project name]"
 ```
 
 **Ready for professional AI-powered SwiftUI development with automatic quality and junior-developer support!** 🎉
