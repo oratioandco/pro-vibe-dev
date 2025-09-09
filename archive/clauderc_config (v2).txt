@@ -1,0 +1,133 @@
+# .clauderc - Claude Code Configuration
+
+[project]
+name = "SwiftUI Project"
+description = "SwiftUI application following defensive programming and best practices"
+language = "swift"
+framework = "swiftui"
+
+[guidelines]
+# Core development principles
+defensive_programming = true
+test_driven_development = true
+documentation_required = true
+
+# File organization rules
+max_file_lines = 200
+max_function_lines = 20
+one_component_per_file = true
+separate_viewmodels = true
+
+# Architecture patterns
+use_mvvm = true
+dependency_injection = true
+protocol_oriented = true
+
+[testing]
+# Testing requirements
+unit_tests_required = true
+ui_tests_for_critical_flows = true
+minimum_coverage = 95
+tdd_for_viewmodels = true
+tdd_for_services = true
+
+[documentation]
+# Documentation standards
+document_public_apis = true
+include_code_examples = true
+update_readme = true
+swift_docc = true
+
+[code_style]
+# SwiftLint integration
+use_swiftlint = true
+max_line_length = 120
+indentation = 4
+
+[git]
+# Commit message format
+conventional_commits = true
+atomic_commits = true
+branch_naming = "feature/ticket-description"
+
+[security]
+# Security requirements
+use_keychain_for_secrets = true
+enforce_https = true
+validate_inputs = true
+no_hardcoded_secrets = true
+
+[performance]
+# Performance guidelines
+use_lazy_stacks = true
+optimize_images = true
+profile_regularly = true
+memory_management = true
+
+[accessibility]
+# a11y requirements
+voiceover_support = true
+dynamic_type = true
+color_contrast_wcag = true
+keyboard_navigation = true
+
+# Custom instructions for Claude Code
+[instructions]
+system_prompt = """
+You are an expert SwiftUI developer following defensive programming practices.
+
+IMPORTANT: Follow the comprehensive development guidelines in 'DEVELOPMENT_GUIDELINES.md' 
+This includes detailed rules for:
+- Test-Driven Development (TDD) with specific examples
+- File organization and size limits  
+- SwiftUI architecture patterns (MVVM)
+- Security best practices (Keychain usage)
+- Performance optimization techniques
+- Accessibility implementation
+- Git commit conventions
+- Documentation standards
+- Error handling patterns
+
+Key Quick Rules:
+1. TDD for ViewModels/Services - write tests FIRST
+2. Split files at 50+ lines or when reusable
+3. Document all public APIs
+4. Use Keychain for sensitive data, never UserDefaults
+5. Implement accessibility by default
+6. Follow conventional commits
+7. Max 200 lines per file, 20 per function
+
+Always reference DEVELOPMENT_GUIDELINES.md for detailed implementation guidance.
+"""
+
+# Reference to detailed guidelines
+guidelines_file = "DEVELOPMENT_GUIDELINES.md"
+
+# File patterns to focus on
+[files]
+include = [
+    "**/*.swift",
+    "*.md",
+    "*.plist",
+    "*.xcconfig"
+]
+exclude = [
+    "**/.build/**",
+    "**/DerivedData/**",
+    "**/*.xcarchive/**",
+    "**/Pods/**"
+]
+
+# Specific SwiftUI patterns
+[swiftui]
+state_management = "@State for local, @StateObject for owned objects"
+data_flow = "Pass data down, actions up"
+view_composition = "Small, focused, reusable components"
+performance = "LazyStacks for large collections"
+error_handling = "Use Result types and proper state management"
+
+[folder_structure]
+features_based = true
+max_depth = 4
+separate_tests = true
+documentation = ".clauderc-docs/"

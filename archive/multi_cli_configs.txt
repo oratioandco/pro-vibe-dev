@@ -1,0 +1,361 @@
+# Multi-CLI Support for Pro-Vibe-Dev
+
+## Supported AI Development CLIs
+
+The pro-vibe-dev system works with multiple AI development tools. Here are configurations for popular options:
+
+## 1. Claude Code (.clauderc)
+
+```toml
+# .clauderc - Enhanced Pro-Vibe-Dev Configuration
+[project]
+name = "SwiftUI Project"
+description = "Professional vibe-coded development with intelligent agent coordination"
+language = "swift"
+framework = "swiftui"
+system = "pro_vibe_dev_enhanced"
+
+[agent_triggers]
+accessibility = ["ui-frontend", "accessibility-expert", "accessibility-auditor"]
+api = ["backend", "data-modeling", "performance-optimizer"]
+testing = ["qa-testing", "tdd-enforcer", "accessibility-auditor"]
+coordination = ["task-coordinator", "sprint-planner"]
+
+[instructions]
+system_prompt = """
+Follow the pro-vibe-dev system with intelligent agent coordination.
+
+AGENT STRUCTURE:
+- UI Specialists: pro-vibe-dev/ui-agents/
+- Backend Specialists: pro-vibe-dev/backend-agents/
+- Quality Specialists: pro-vibe-dev/quality-agents/
+- Coordination: pro-vibe-dev/coordination-agents/
+
+WORKFLOWS:
+- Complex tasks: Use pro-vibe-dev/coordination-agents/task-coordinator.md
+- Quality gates: Follow pro-vibe-dev/workflows/quality-gates.md
+- Task execution: Follow pro-vibe-dev/workflows/task-execution.md
+
+Always coordinate multi-agent work and trigger quality gates.
+"""
+```
+
+## 2. Cursor (.cursor/settings.json)
+
+```json
+{
+  "cursor.general.enableCopilot": true,
+  "cursor.ai.model": "claude-3.5-sonnet",
+  "cursor.ai.customInstructions": "Follow the pro-vibe-dev system located in ./pro-vibe-dev/. Use agent coordination for complex tasks via coordination-agents/task-coordinator.md. Reference appropriate specialist agents from ui-agents/, backend-agents/, or quality-agents/ based on task context. Follow quality-gates.md workflow for validation. Always maintain accessibility-first SwiftUI development with TDD approach.",
+  "cursor.ai.agentConfiguration": {
+    "agentsDirectory": "./pro-vibe-dev/",
+    "workflowsDirectory": "./pro-vibe-dev/workflows/",
+    "qualityGatesEnabled": true,
+    "tddEnforcement": true,
+    "accessibilityFirst": true
+  }
+}
+```
+
+## 3. Continue (.continue/config.json)
+
+```json
+{
+  "models": [
+    {
+      "title": "Claude 3.5 Sonnet",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "systemMessage": "You are an expert SwiftUI developer following the pro-vibe-dev system. Reference agent specialists from ./pro-vibe-dev/ directory structure. Use task-coordinator.md for complex multi-agent work. Follow quality-gates.md for validation. Maintain accessibility-first development with TDD methodology."
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "coordinate-task",
+      "description": "Use task coordinator for complex features",
+      "prompt": "Use pro-vibe-dev/coordination-agents/task-coordinator.md to analyze and coordinate this task: {{{ input }}}"
+    },
+    {
+      "name": "ui-agent",
+      "description": "Use UI frontend specialist",
+      "prompt": "Follow pro-vibe-dev/ui-agents/ui-frontend.md guidelines to implement: {{{ input }}}"
+    },
+    {
+      "name": "backend-agent", 
+      "description": "Use backend specialist",
+      "prompt": "Follow pro-vibe-dev/backend-agents/backend.md guidelines to implement: {{{ input }}}"
+    },
+    {
+      "name": "quality-gates",
+      "description": "Trigger comprehensive quality review",
+      "prompt": "Use pro-vibe-dev/workflows/quality-gates.md to perform quality validation for: {{{ input }}}"
+    }
+  ],
+  "contextProviders": [
+    {
+      "name": "pro-vibe-dev",
+      "description": "Pro-vibe-dev system files",
+      "type": "file",
+      "config": {
+        "patterns": ["pro-vibe-dev/**/*.md", ".clauderc", "DEVELOPMENT_GUIDELINES.md"]
+      }
+    }
+  ]
+}
+```
+
+## 4. Aider (.aider.conf.yml)
+
+```yaml
+# .aider.conf.yml - Pro-Vibe-Dev Configuration
+model: claude-3-5-sonnet
+edit-format: diff
+git: true
+auto-commits: true
+dirty-commits: false
+
+# Pro-vibe-dev system integration
+system-message: |
+  You are an expert SwiftUI developer following the pro-vibe-dev methodology.
+  
+  AGENT COORDINATION:
+  - Use ./pro-vibe-dev/coordination-agents/task-coordinator.md for complex tasks
+  - Reference specialist agents from domain directories (ui-agents/, backend-agents/, quality-agents/)
+  - Follow quality-gates.md workflow for validation
+  
+  DEVELOPMENT STANDARDS:
+  - Accessibility-first SwiftUI development
+  - Test-driven development (TDD) methodology  
+  - Component-based architecture with proper separation
+  - Defensive programming with comprehensive error handling
+  
+  QUALITY INTEGRATION:
+  - Auto-trigger quality gates based on file types
+  - Ensure 95%+ test coverage for business logic
+  - Validate accessibility compliance for all UI work
+  - Follow anti-overengineering principles
+
+# Include pro-vibe-dev files in context
+read:
+  - "pro-vibe-dev/**/*.md"
+  - ".clauderc"
+  - "DEVELOPMENT_GUIDELINES.md"
+```
+
+## 5. Codeium (.codeium/config.json)
+
+```json
+{
+  "api_key": "${CODEIUM_API_KEY}",
+  "language": "swift",
+  "framework": "swiftui",
+  "project_context": {
+    "type": "pro_vibe_dev",
+    "agents_directory": "./pro-vibe-dev/",
+    "workflows_directory": "./pro-vibe-dev/workflows/"
+  },
+  "custom_instructions": "Follow pro-vibe-dev system with intelligent agent coordination. Use task-coordinator.md for complex work. Reference specialist agents based on context. Follow quality-gates.md for validation. Maintain accessibility-first SwiftUI development.",
+  "quality_gates": {
+    "tdd_enforcement": true,
+    "accessibility_validation": true,
+    "test_coverage_minimum": 95
+  }
+}
+```
+
+## 6. GitHub Copilot (.github/copilot-instructions.md)
+
+```markdown
+# GitHub Copilot Instructions for Pro-Vibe-Dev
+
+## System Overview
+This project uses the pro-vibe-dev methodology with intelligent agent coordination and automatic quality gates.
+
+## Agent Coordination
+- **Complex tasks**: Reference `pro-vibe-dev/coordination-agents/task-coordinator.md`
+- **UI work**: Follow `pro-vibe-dev/ui-agents/ui-frontend.md` with accessibility-first approach
+- **Backend work**: Follow `pro-vibe-dev/backend-agents/backend.md` with TDD methodology
+- **Quality validation**: Use `pro-vibe-dev/workflows/quality-gates.md`
+
+## Development Standards
+- **SwiftUI**: Component-based architecture with accessibility built-in
+- **Testing**: Test-driven development with 95%+ coverage for business logic
+- **Security**: Use Keychain for sensitive data, never UserDefaults
+- **Performance**: 60fps animations, efficient rendering, smart caching
+
+## Quality Gates
+Auto-trigger quality validation for:
+- SwiftUI files → UI Frontend + Accessibility Expert + TDD Enforcer
+- Service files → Backend + TDD Enforcer + Security validation
+- Test files → QA Testing + TDD compliance
+- PR creation → Comprehensive quality review
+
+## Code Patterns
+```swift
+// ✅ Accessibility-first SwiftUI
+Button("Save Changes") {
+    saveProfile()
+}
+.accessibilityLabel("Save profile changes")
+.accessibilityHint("Saves your current profile information")
+
+// ✅ Secure backend services
+class UserService: ObservableObject, UserServiceProtocol {
+    private let secureStorage: SecureStorageProtocol
+    // Always use protocol-oriented design with dependency injection
+}
+
+// ✅ TDD approach
+func testLogin_ValidCredentials_ReturnsUser() async throws {
+    // Given-When-Then structure with clear test names
+}
+```
+```
+
+## 7. Generic AI CLI Configuration
+
+For any AI development tool, create a `pro-vibe-dev-config.md` file:
+
+```markdown
+# Pro-Vibe-Dev AI Tool Configuration
+
+## System Prompt Template
+```
+You are an expert SwiftUI developer following the pro-vibe-dev methodology with intelligent agent coordination.
+
+DIRECTORY STRUCTURE:
+- Agents: ./pro-vibe-dev/{ui-agents,backend-agents,quality-agents,coordination-agents}/
+- Workflows: ./pro-vibe-dev/workflows/
+- Tasks: ./pro-vibe-dev/tasks/
+- Templates: ./pro-vibe-dev/templates/
+
+COORDINATION WORKFLOW:
+1. Analyze task complexity using task-coordinator.md
+2. Select appropriate specialist agents based on context
+3. Follow quality-gates.md for validation checkpoints
+4. Execute with task-execution.md methodology
+
+QUALITY STANDARDS:
+- Accessibility-first SwiftUI development (VoiceOver, Dynamic Type, WCAG AA)
+- Test-driven development with 95%+ business logic coverage
+- Security-conscious backend development (Keychain, input validation)
+- Performance optimization (60fps UI, efficient async operations)
+- Anti-overengineering mindset with clear user value focus
+
+AGENT SELECTION:
+- UI/SwiftUI work → ui-agents/ui-frontend.md + accessibility-expert.md
+- Backend/API work → backend-agents/backend.md + security validation
+- Testing/Quality → quality-agents/qa-testing.md + tdd-enforcer.md
+- Complex coordination → coordination-agents/task-coordinator.md
+
+Always reference the appropriate agent files and follow the established workflows.
+```
+
+## Usage Commands by CLI
+
+### Claude Code
+```bash
+claude-code --task="Use task-coordinator.md to implement accessible login feature"
+claude-code --context="Follow ui-frontend.md for SwiftUI component creation"
+```
+
+### Cursor
+```bash
+# Use Cmd+K with context
+"Follow pro-vibe-dev ui-frontend agent to create user profile component"
+```
+
+### Continue
+```bash
+# Use custom commands
+/coordinate-task "implement real-time notifications"
+/ui-agent "create accessible form components"
+/quality-gates "review authentication feature"
+```
+
+### Aider
+```bash
+aider --message "Use pro-vibe-dev task-coordinator to implement chat feature"
+aider --architect "Follow ui-frontend.md to create accessible onboarding flow"
+```
+
+### Generic Approach
+```bash
+# Any AI tool can use this pattern:
+[AI_TOOL] --prompt="Reference pro-vibe-dev/coordination-agents/task-coordinator.md to coordinate implementation of [feature description]"
+```
+```
+
+## Universal Workflow Integration
+
+### 1. Standard Commands Across All CLIs
+
+Create a `pro-vibe-dev/cli-commands.md` file:
+
+```markdown
+# Universal CLI Commands for Pro-Vibe-Dev
+
+## Task Coordination
+**Purpose**: Analyze and coordinate complex multi-agent tasks
+**Command Pattern**: `[CLI] "Use pro-vibe-dev/coordination-agents/task-coordinator.md to coordinate: [task description]"`
+
+## Agent Selection
+**UI Work**: `[CLI] "Follow pro-vibe-dev/ui-agents/ui-frontend.md to implement: [UI task]"`
+**Backend Work**: `[CLI] "Follow pro-vibe-dev/backend-agents/backend.md to implement: [backend task]"`
+**Quality Review**: `[CLI] "Use pro-vibe-dev/workflows/quality-gates.md to validate: [feature]"`
+
+## Workflow Execution
+**Task Execution**: `[CLI] "Follow pro-vibe-dev/workflows/task-execution.md to complete: [specific task]"`
+**PRD Creation**: `[CLI] "Use pro-vibe-dev/workflows/prd-creation.md to create PRD for: [feature]"`
+**Task Generation**: `[CLI] "Use pro-vibe-dev/workflows/create-tasks.md to generate tasks from: [PRD file]"`
+```
+
+### 2. CLI Detection Script
+
+Create `scripts/detect-cli.sh`:
+
+```bash
+#!/bin/bash
+# Detect available AI development CLIs and suggest optimal configuration
+
+echo "🔍 Detecting AI Development CLIs..."
+
+if command -v claude-code &> /dev/null; then
+    echo "✅ Claude Code detected - Using .clauderc configuration"
+fi
+
+if [ -f ".cursor/settings.json" ]; then
+    echo "✅ Cursor detected - Configure with .cursor/settings.json"
+fi
+
+if [ -f ".continue/config.json" ]; then
+    echo "✅ Continue detected - Configure with .continue/config.json" 
+fi
+
+if [ -f ".aider.conf.yml" ]; then
+    echo "✅ Aider detected - Configure with .aider.conf.yml"
+fi
+
+echo ""
+echo "💡 Pro-vibe-dev works with any AI CLI using the markdown workflow files!"
+echo "📚 Reference: pro-vibe-dev/cli-commands.md for universal command patterns"
+```
+
+## Benefits of Multi-CLI Support
+
+### ✅ **Tool Flexibility**
+- **Switch between CLIs** without losing workflow efficiency
+- **Team members can use preferred tools** while following same methodology
+- **Future-proof** - works with new AI development tools as they emerge
+
+### ✅ **Consistent Quality**
+- **Same quality standards** regardless of CLI tool used
+- **Agent coordination** works across all tools
+- **Workflow consistency** maintained across team and tools
+
+### ✅ **Easy Migration**
+- **No vendor lock-in** - workflows are tool-independent
+- **Gradual adoption** - team can try different tools
+- **Investment protection** - methodology survives tool changes
+
+The pro-vibe-dev system is designed to be **CLI-agnostic** while providing **intelligent coordination** regardless of which AI development tool you choose! 🚀

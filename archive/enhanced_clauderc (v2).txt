@@ -1,0 +1,166 @@
+# .clauderc - Enhanced AI-Dev-Tasks Configuration
+
+[project]
+name = "SwiftUI Project"
+description = "Lean, iterative SwiftUI development with AI-powered task management"
+language = "swift"
+framework = "swiftui"
+development_approach = "lean_iterative"
+
+[prd_system]
+# Lean PRD creation settings
+max_vision_prd_pages = 3
+max_feature_prd_pages = 2
+focus_on_mvp = true
+anti_overengineering = true
+conversation_time_limit = "12_minutes"
+
+# PRD hierarchy
+vision_prd_location = ".taskmaster/docs/vision-prd.md"
+feature_prds_location = ".taskmaster/docs/features/"
+research_location = ".taskmaster/docs/research/"
+
+[task_generation]
+# Auto-generate tasks from PRDs
+auto_generate_from_prd = true
+test_driven_tasks = true
+swiftui_component_based = true
+max_task_complexity = "2_hours"
+epic_per_feature = true
+
+# Task organization
+tasks_file = ".taskmaster/tasks/tasks.json" 
+individual_tasks_dir = ".taskmaster/tasks/individual-tasks/"
+
+[development_guidelines]
+# Reference to comprehensive standards
+guidelines_file = "DEVELOPMENT_GUIDELINES.md"
+max_file_lines = 200
+max_function_lines = 20
+tdd_required = true
+documentation_required = true
+
+[swiftui_patterns]
+# SwiftUI-specific development patterns
+architecture = "mvvm"
+state_management = "@State for local, @StateObject for owned, @ObservedObject for injected"
+component_splitting = "50_lines_or_reusable"
+performance_optimization = true
+accessibility_first = true
+
+[workflow_integration]
+# Integration with development workflow
+sync_docs_on_commit = true
+update_readme_on_progress = true
+research_before_complex_features = true
+validate_mvp_scope = true
+
+[instructions]
+system_prompt = """
+You are an expert SwiftUI developer focused on lean, iterative development with AI-powered task management.
+
+CORE PRINCIPLES:
+- Ship fast, learn quickly, iterate based on feedback
+- MVP-first approach - build minimum viable features
+- Test-driven development for all business logic
+- Component-based architecture with clear separation
+- Anti-overengineering - question every abstraction
+
+PRD CREATION WORKFLOW:
+1. Distinguish between Vision PRD (app-level) vs Feature PRD (feature-level)
+2. Keep conversations focused and time-boxed (10-12 minutes max)
+3. Always define MVP scope and explicitly exclude nice-to-haves
+4. Identify clear success metrics and next iteration paths
+5. Focus on user value, not technical complexity
+
+TASK GENERATION FROM PRDs:
+- Break features into SwiftUI components (Views, ViewModels, Services, Models)
+- Create test-first tasks (write failing tests before implementation)
+- Each task should be completable in 1-2 hours maximum
+- Link tasks to specific PRD success criteria
+- Organize tasks by feature epics for clear tracking
+
+SWIFTUI DEVELOPMENT STANDARDS:
+- Follow DEVELOPMENT_GUIDELINES.md for all implementation details
+- Use defensive programming with proper error handling
+- Implement accessibility features by default (VoiceOver, Dynamic Type)
+- Store sensitive data in Keychain only, never UserDefaults
+- Keep files under 200 lines, split components when needed
+- Use conventional git commits with task references
+
+LEAN DEVELOPMENT CHECKS:
+Before adding any feature or complexity, ask:
+- Does this solve a real user problem we've validated?
+- Is this the simplest solution that could work?
+- Can we build this with existing patterns/components?
+- How will we measure if this is successful?
+- What would we cut if we had half the time?
+
+CURRENT PROJECT CONTEXT:
+Always check .taskmaster/tasks/tasks.json for current priorities and progress.
+Reference .taskmaster/docs/ for existing PRDs and research.
+Update task status as work progresses.
+Sync documentation when completing major features.
+
+WORKFLOW COMMANDS:
+- Check next task: reference tasks.json for pending items
+- Research complex topics: save findings to .taskmaster/docs/research/
+- Update progress: modify task status in tasks.json
+- Sync docs: run documentation updates after significant progress
+
+Remember: Build the simplest thing that provides user value, measure the results, then iterate based on learnings.
+"""
+
+[file_organization]
+# Project structure optimization
+features_based_structure = true
+max_folder_depth = 4
+separate_test_files = true
+component_per_file = true
+
+# File patterns for Claude Code focus
+include_patterns = [
+    "**/*.swift",
+    "*.md", 
+    ".taskmaster/**/*.json",
+    ".taskmaster/**/*.md",
+    "*.xcconfig"
+]
+
+exclude_patterns = [
+    "**/.build/**",
+    "**/DerivedData/**", 
+    "**/*.xcarchive/**",
+    "**/Pods/**",
+    ".git/**"
+]
+
+[ai_capabilities]
+# AI-powered development features
+research_integration = true
+prd_guided_conversations = true
+auto_task_generation = true
+progress_tracking = true
+documentation_sync = true
+
+# Task management integration
+task_status_updates = true
+epic_organization = true
+dependency_tracking = true
+progress_visualization = true
+
+[quality_gates]
+# Quality assurance integration
+unit_test_coverage_minimum = 95
+swiftlint_integration = true
+accessibility_validation = true
+performance_monitoring = true
+security_best_practices = true
+
+[iteration_management]
+# Support for iterative development
+mvp_focus = true
+feedback_integration = true
+success_metrics_tracking = true
+next_iteration_planning = true
+feature_flag_support = false

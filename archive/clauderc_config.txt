@@ -1,0 +1,151 @@
+# .clauderc - Claude Code Configuration
+
+[project]
+name = "SwiftUI Project"
+description = "SwiftUI application following defensive programming and best practices"
+language = "swift"
+framework = "swiftui"
+
+[guidelines]
+# Core development principles
+defensive_programming = true
+test_driven_development = true
+documentation_required = true
+
+# File organization rules
+max_file_lines = 200
+max_function_lines = 20
+one_component_per_file = true
+separate_viewmodels = true
+
+# Architecture patterns
+use_mvvm = true
+dependency_injection = true
+protocol_oriented = true
+
+[testing]
+# Testing requirements
+unit_tests_required = true
+ui_tests_for_critical_flows = true
+minimum_coverage = 95
+tdd_for_viewmodels = true
+tdd_for_services = true
+
+[documentation]
+# Documentation standards
+document_public_apis = true
+include_code_examples = true
+update_readme = true
+swift_docc = true
+
+[code_style]
+# SwiftLint integration
+use_swiftlint = true
+max_line_length = 120
+indentation = 4
+
+[git]
+# Commit message format
+conventional_commits = true
+atomic_commits = true
+branch_naming = "feature/ticket-description"
+
+[security]
+# Security requirements
+use_keychain_for_secrets = true
+enforce_https = true
+validate_inputs = true
+no_hardcoded_secrets = true
+
+[performance]
+# Performance guidelines
+use_lazy_stacks = true
+optimize_images = true
+profile_regularly = true
+memory_management = true
+
+[accessibility]
+# a11y requirements
+voiceover_support = true
+dynamic_type = true
+color_contrast_wcag = true
+keyboard_navigation = true
+
+# Custom instructions for Claude Code
+[instructions]
+system_prompt = """
+You are an expert SwiftUI developer following defensive programming practices. 
+
+CRITICAL RULES:
+1. Always write tests FIRST (TDD) for ViewModels and Services
+2. Split components into separate files when they exceed 50 lines
+3. Document all public APIs with Swift-DocC format
+4. Use proper error handling and input validation
+5. Follow MVVM architecture patterns
+6. Implement accessibility features by default
+7. Use conventional commit messages
+8. Never store sensitive data in UserDefaults - use Keychain
+
+FILE ORGANIZATION:
+- Views: UI components only, max 200 lines
+- ViewModels: Business logic, inherit ObservableObject
+- Models: Data structures, validation only
+- Services: External communication, dependency injection
+- Extensions: Single responsibility, max 100 lines
+
+TESTING STRATEGY:
+- ViewModels: 95%+ unit test coverage
+- Services: Integration tests for all methods
+- Views: UI tests for complex logic only
+- Use Page Object Pattern for UI tests
+
+SECURITY:
+- Store tokens/passwords in Keychain only
+- Validate all user inputs
+- Use HTTPS for all network requests
+- Implement proper error handling without exposing internals
+
+PERFORMANCE:
+- Use LazyVStack/LazyHStack for large lists
+- Optimize images and assets
+- Profile with Instruments regularly
+- Manage memory carefully with weak references
+
+When creating new features:
+1. Start with failing tests
+2. Create minimal implementation
+3. Add proper documentation
+4. Ensure accessibility
+5. Split into appropriate files
+6. Add error handling
+7. Verify performance impact
+"""
+
+# File patterns to focus on
+[files]
+include = [
+    "**/*.swift",
+    "*.md",
+    "*.plist",
+    "*.xcconfig"
+]
+exclude = [
+    "**/.build/**",
+    "**/DerivedData/**",
+    "**/*.xcarchive/**",
+    "**/Pods/**"
+]
+
+# Specific SwiftUI patterns
+[swiftui]
+state_management = "@State for local, @StateObject for owned objects"
+data_flow = "Pass data down, actions up"
+view_composition = "Small, focused, reusable components"
+performance = "LazyStacks for large collections"
+error_handling = "Use Result types and proper state management"
+
+[folder_structure]
+features_based = true
+max_depth = 4
+separate_tests = true
+documentation = ".clauderc-docs/"

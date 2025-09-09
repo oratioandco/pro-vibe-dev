@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "Pro-Vibe-Dev SwiftUI Project",
+    "description": "Universal AI CLI integration with complete pro-vibe-dev tracking",
+    "language": "swift",
+    "framework": "swiftui", 
+    "system": "pro_vibe_dev_phase3"
+  },
+  "integration": {
+    "type": "universal",
+    "cli_agnostic": true,
+    "auto_detection": true,
+    "fallback_patterns": true
+  },
+  "tracking": {
+    "method": "multi_modal",
+    "file_monitoring": {
+      "enabled": true,
+      "watch_patterns": ["**/*.swift", "**/tests/**", "**/docs/**"],
+      "ignore_patterns": ["**/build/**", "**/DerivedData/**"]
+    },
+    "git_integration": {
+      "enabled": true,
+      "hook_installation": "automatic",
+      "commit_analysis": true
+    },
+    "environment_variables": {
+      "enabled": true,
+      "auto_export": true,
+      "config_file": ".env.pro-vibe-dev"
+    }
+  },
+  "intelligence": {
+    "pattern_learning": true,
+    "predictive_recommendations": true,
+    "architecture_analysis": true,
+    "quality_trend_analysis": true,
+    "velocity_tracking": true,
+    "junior_dev_mentoring": true
+  },
+  "universal_commands": {
+    "create_vision_prd": "Use pro-vibe-dev/workflows/create-vision-prd.md to create strategic product vision: {description}",
+    "create_tasks": "Use pro-vibe-dev/workflows/create-tasks.md to convert PRD into junior-developer tasks: {prd_name}",
+    "task_execution": "Use pro-vibe-dev/workflows/task-execution.md to implement: {task_description}",
+    "coordination": "Use pro-vibe-dev/coordination-agents/task-coordinator.md to coordinate: {complex_task}",
+    "quality_gates": "Apply pro-vibe-dev/workflows/quality-gates.md to validate: {target}",
+    "progress_report": "Use pro-vibe-dev/tracking/intelligence/progress-reporter.md to generate: {report_type}",
+    "knowledge_sync": "Use pro-vibe-dev/tracking/intelligence/knowledge-updater.md to sync knowledge base"
+  },
+  "cli_adaptations": {
+    "command_prefixes": {
+      "claude_code": "claude-code --task=",
+      "cursor": "cursor --prompt=",
+      "continue": "continue --request=", 
+      "aider": "aider --message=",
+      "copilot": "copilot-cli --query="
+    },
+    "output_parsing": {
+      "completion_detection": true,
+      "quality_analysis": true,
+      "progress_extraction": true
+    }
+  },
+  "quality_standards": {
+    "accessibility": {
+      "standard": "WCAG_AA",
+      "validation": "automatic",
+      "tools": ["VoiceOver", "DynamicType", "ColorContrast"]
+    },
+    "testing": {
+      "methodology": "TDD",
+      "coverage_target": 95,
+      "validation": "automatic"
+    },
+    "security": {
+      "validation": "automatic",
+      "standards": ["keychain_storage", "input_validation", "https_only"]
+    },
+    "performance": {
+      "targets": {
+        "ui_responsiveness": "60fps",
+        "api_response": "100ms",
+        "app_launch": "2s"
+      },
+      "monitoring": "continuous"
+    }
+  },
+  "junior_developer_support": {
+    "task_chunking": "1_to_4_hours",
+    "implementation_guidance": "comprehensive",
+    "learning_integration": true,
+    "quality_mentoring": true,
+    "tdd_templates": true,
+    "code_examples": true
+  }
+}
