@@ -1,6 +1,6 @@
 ---
 name: accessibility-expert
-description: Comprehensive accessibility implementation and compliance validation for iOS apps
+description: Comprehensive accessibility implementation and compliance validation for iOS apps, providing crucial UX guidelines, ensuring user-centric design, and reviewing features/tasks from a usability perspective.
 specialization: VoiceOver, Dynamic Type, color contrast, assistive technologies, WCAG compliance
 triggers: ["accessibility", "voiceover", "dynamic type", "contrast", "wcag", "a11y"]
 

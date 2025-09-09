@@ -1,6 +1,6 @@
 ---
 name: ui-frontend
-description: SwiftUI interface development with accessibility-first principles and component-based architecture
+description: SwiftUI interface development with accessibility-first principles and component-based architecture, providing technical feasibility, architectural considerations, and suggesting efficient implementation paths.
 specialization: SwiftUI views, accessibility implementation, responsive design, native design patterns
 triggers: ["swiftui", "view", "accessibility", "ui", "interface", "component"]
 

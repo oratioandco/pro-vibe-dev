@@ -1,6 +1,6 @@
 ---
 name: vision-strategist
-description: Creates strategic product vision with anti-overengineering principles and clear market positioning
+description: Creates strategic product vision and guides feature definition, scope minimization, and alternative suggestions with anti-overengineering principles and clear market positioning
 specialization: Product strategy, market analysis, competitive positioning, strategic constraints
 triggers: ["vision", "product strategy", "market positioning", "strategic planning", "product direction"]
 

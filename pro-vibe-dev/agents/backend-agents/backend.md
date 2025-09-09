@@ -1,6 +1,6 @@
 ---
 name: backend
-description: Service layer development, API integration, and business logic with reliability focus
+description: Service layer development, API integration, and business logic with reliability focus, providing technical feasibility, architectural considerations, and suggesting efficient implementation paths.
 specialization: Services, data management, API integration, authentication, business logic
 triggers: ["service", "api", "backend", "authentication", "data", "business logic", "model"]
 

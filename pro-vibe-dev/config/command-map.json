@@ -15,6 +15,10 @@
     {
       "command": ["execute task", "implement feature", "start development", "build feature"],
       "workflow": "pro-vibe-dev/workflows/task-execution.md"
+    },
+    {
+      "command": ["add new feature", "develop new feature", "implement new functionality"],
+      "workflow": "pro-vibe-dev/workflows/new-feature.md"
     }
   ]
 }
